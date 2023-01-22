@@ -12,13 +12,12 @@ import java.io.InputStream;
 
 public class GamePanel extends JPanel {
 
-
-    private MouseInputs mouseInputs;
-    private float xDelta = 100, yDelta = 100;
-    private int playerSpeed = 4;
     private KeyboardInputs keyboardInputs = new KeyboardInputs(this);
+    private MouseInputs mouseInputs;
 
     private BufferedImage img, subImage;
+    private float xDelta = 100, yDelta = 100;
+    private float playerSpeed = 3.5f;
 
 
     public GamePanel() {
@@ -56,16 +55,6 @@ public class GamePanel extends JPanel {
         setMaximumSize(size);
     }
 
-    public void changeXDelta(int value) {
-        this.xDelta += value;
-
-    }
-
-    public void changeYDelta(int value) {
-        this.yDelta += value;
-
-    }
-
     public void setRectPos(int x, int y) {
         this.xDelta = x;
         this.yDelta = y;
@@ -82,7 +71,6 @@ public class GamePanel extends JPanel {
     }
 
     public void update() {
-
         if (keyboardInputs.up) {
             yDelta -= playerSpeed;
         } else if (keyboardInputs.down) {
