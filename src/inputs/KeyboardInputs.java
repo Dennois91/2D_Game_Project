@@ -10,8 +10,6 @@ public class KeyboardInputs implements KeyListener {
     public boolean down = false;
     public boolean left = false;
     public boolean right = false;
-
-
     private GamePanel gamePanel;
 
     public KeyboardInputs(GamePanel gamePanel) {
@@ -65,12 +63,5 @@ public class KeyboardInputs implements KeyListener {
                 right = false;
             }
         }
-    }
-
-    public void setFalse() {
-        up = false;
-        down = false;
-        left = false;
-        right = false;
     }
 }
